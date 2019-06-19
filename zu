@@ -45,7 +45,15 @@ $ver $desc
 Got 0 argument. Generate picture by default settings.
 EOS
     if [[ -e "$location$name.$format" ]]; then
+        local num=2
+        while [[ -e "$location$name$num.$format" ]]
+        do
+            num=$((++num))
+        done
+        magick convert -size $size xc:$color "$location$name$num.$format"
+    else
         magick convert -size $size xc:$color "$location$name.$format"
+    fi
 }
 
 one () {
