@@ -3,8 +3,8 @@
 ####################################################                    .....(JJJJJ.....
 ####################################################              ..gMMMMMMMMMMMMMMMMMMMMMMN+,.
 ####                                            ####          .(MMMMM""^`               ''""MMMMNa,
-####      ###############################       ####        .MMM#"`                           7HMMMa.
-####    ###############################         ####      .MMM"                                  7MMMe
+####       ########   #######   #########       ####        .MMM#"`                           7HMMMa.
+####     ########   #######   #########         ####      .MMM"                                  7MMMe
 ####                        #########           ####     dMMMMMMMNg(....                .....)gMMMMMMMN.
 ####                      #########             ####    JMM^ _7""HMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"""! ,MMb
 ####                    #########               ####    MM#          dM#?7""""""""""""7?MMN          dMM
@@ -13,7 +13,7 @@
 ####              #########     ###     ###     ####      TMMNJ.  .MMM!                  .MMN,  ..MMMB`
 ####            #########      ####   #####     ####       .TMMMMMMMN..                  ..MMMMMMMMD!
 ####          #########         #######  ##     ####           ?TWMMMMMMMMMMMNNNNNMMMMMMMMMMMMY"^
-####        #########                           ####                  _?7"""""""""""""""7!
+####        #########                           ####                   ?7"""""""""""""""7!
 ####      ###################################   ####
 ####   ####################################     ####    Zu : A shell script for students who take notes with PC.
 ####                                            ####    HIBIKI CUBE : @hibiki_cube, hibiki.apple.1984+dev@gmail.com
@@ -24,7 +24,7 @@ ver="Zu 0.0.0"
 desc="Easy pictuer operator"
 
 # config
-if [ -e ~/.config/zu/config ]
+if [ -e ~/.config/zu/config ]; then
     .~/.config/zu/config
 else
     mkdir ~/.config/zu
@@ -44,7 +44,7 @@ zero () {
 $ver $desc
 Got 0 argument. Generate picture by default settings.
 EOS
-    if [ -e ]
+    if [ -e  ]; then
     magick convert -size $size xc:$color $location$name.$format
 }
 
