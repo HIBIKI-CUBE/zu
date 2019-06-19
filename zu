@@ -24,8 +24,8 @@ ver="Zu 0.0.0"
 desc="Easy pictuer operator"
 
 # config
-if [ -e ~/.config/zu/config ]; then
-    .~/.config/zu/config
+if [[ -e ~/.config/zu/config ]]; then
+    . ~/.config/zu/config
 else
     mkdir ~/.config/zu
     cat << EOS > ~/.config/zu/config
@@ -36,7 +36,7 @@ size=500x500
 name=zu
 format=png
 EOS
-    .~/.config/zu/config
+    . ~/.config/zu/config
 fi
 
 zero () {
@@ -44,8 +44,8 @@ zero () {
 $ver $desc
 Got 0 argument. Generate picture by default settings.
 EOS
-    if [ -e  ]; then
-    magick convert -size $size xc:$color $location$name.$format
+    if [[ -e "$location$name.$format" ]]; then
+        magick convert -size $size xc:$color "$location$name.$format"
 }
 
 one () {
